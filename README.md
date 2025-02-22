@@ -12,7 +12,7 @@ This repository contains the design and implementation of a **Bank Management Sy
 
 ## 📂 **Use Cases**
 
-### 1. **Account Management** 🧾
+### 1. **Account Management** 🧾 - Omar Abdulaziz Mohamed (202002985)
 - **Create Account**: Customers can create a new bank account. ✍️
 - **Close Account**: Customers can close their existing account. 🔒
 - **Update Account Information**: Customers can update personal details such as address, phone number, etc. 📝
@@ -21,7 +21,7 @@ This repository contains the design and implementation of a **Bank Management Sy
 
 ---
 
-### 2. **Transaction Management** 💰
+### 2. **Transaction Management** 💰 - Abdulaziz Hijris (20186302)
 - **Deposit Funds**: Customers can deposit money into their account. 💵
 - **Withdraw Funds**: Customers can withdraw money from their account. 💳
 - **Transfer Funds**: Customers can transfer money between accounts (both internal and external). 🔁
@@ -30,7 +30,7 @@ This repository contains the design and implementation of a **Bank Management Sy
 
 ---
 
-### 3. **Loan Services** 🏡💸
+### 3. **Loan Services** 🏡💸 - Ali Abdulla Jaafar (202109721)
 - **Apply for Loan**: Customers can apply for various types of loans (e.g., personal, home loans). 🏠
 - **View Loan Status**: Customers can track the status of their loan application (approved, pending, or rejected). 📑
 - **Repay Loan**: Customers can make repayments for their loans. 💳
@@ -38,7 +38,7 @@ This repository contains the design and implementation of a **Bank Management Sy
 
 ---
 
-### 4. **Security & Authentication** 🔐
+### 4. **Security & Authentication** 🔐 (ALL)
 - **Login/Logout**: Users (both customers and bank staff) can log in securely and log out. 🔑
 - **Two-Factor Authentication**: An additional security layer (via SMS, email, etc.) for login and sensitive actions. 📲
 - **Password Recovery/Change**: Users can recover or change their password as needed. 🔄
@@ -46,7 +46,7 @@ This repository contains the design and implementation of a **Bank Management Sy
 
 ---
 
-### 5. **Admin & Staff Management** 👨‍💼👩‍💼
+### 5. **Admin & Staff Management** 👨‍💼👩‍💼 - Ammar Osama (202206744)
 - **Add/Remove Staff**: Admins can add or remove staff members from the system. ➕➖
 - **Assign Roles to Staff**: Admins can assign specific roles (e.g., teller, manager) to staff members. 🧑‍💻
 - **View Staff Performance**: Admins can view reports on staff performance and activities. 📊
@@ -54,7 +54,7 @@ This repository contains the design and implementation of a **Bank Management Sy
 
 ---
 
-### 6. **Customer Support** 📞
+### 6. **Customer Support** 📞 (ALL)
 - **File Complaint**: Customers can file complaints for issues like transaction errors or account problems. 😡
 - **View Complaint Status**: Customers can track the status of their complaints. 📍
 - **Chat/Support Request**: Customers can request support for any issues or inquiries they have. 💬
