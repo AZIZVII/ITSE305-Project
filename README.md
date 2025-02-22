@@ -1,9 +1,9 @@
 # ITSE305-Project
 this is Done by 
-Ali Abdulla Jaafar (202109721)
-Omar Abdulaziz Mohamed (202002985)
-Ammar Osama (202206744)
-Abdulaziz Hijris (20186302)
+- Ali Abdulla Jaafar (202109721)
+- Omar Abdulaziz Mohamed (202002985)
+- Ammar Osama (202206744)
+- Abdulaziz Hijris (20186302)
 ## Bank Management System 📊🏦
 
 This repository contains the design and implementation of a **Bank Management System** with various functionalities to manage accounts, transactions, loans, security, staff, and customer support. Below are the key features and use cases of the system:
