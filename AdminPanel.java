@@ -81,7 +81,7 @@ class StaffManagement {
 }
 
 // Presentation Layer: Provides an interface to interact with staff management
-public class AdminPanel { 
+public class AdminPanel {
     public static void main(String[] args) { // Change "AdminPanel" to "main"
         Scanner scanner = new Scanner(System.in);
         StaffManagement manager = new StaffManagement();
