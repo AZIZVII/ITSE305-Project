@@ -12,7 +12,7 @@ This repository contains the design and implementation of a **Bank Management Sy
 
 ## **Use Cases**
 
-### 1. **Account Management** 🧾 - Omar Abdulaziz Mohamed (202002985)
+### 1. **Account Management**  - Omar Abdulaziz Mohamed (202002985)
 - **Create Account**: Customers can create a new bank account. 
 - **Close Account**: Customers can close their existing account. 
 - **Update Account Information**: Customers can update personal details such as address, phone number, etc. 
@@ -26,7 +26,7 @@ This repository contains the design and implementation of a **Bank Management Sy
 - **Withdraw Funds**: Customers can withdraw money from their account. 
 - **Transfer Funds**: Customers can transfer money between accounts (both internal and external). 
 - **View Transaction History**: Customers can view a list of all their past transactions. 
-- **Transaction Limitation/Fees**: The system checks if the customer meets withdrawal/transfer limits and applies any necessary transaction fees. ⚖
+- **Transaction Limitation/Fees**: The system checks if the customer meets withdrawal/transfer limits and applies any necessary transaction fees. 
 
 ---
 
