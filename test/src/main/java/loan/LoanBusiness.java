@@ -1,3 +1,4 @@
+package loan;
 public class LoanBusiness {
     private LoanData loanData; // data layer object to manage loan data
 

@@ -1,3 +1,4 @@
+package loan;
 import java.util.Scanner;
 
 public class LoanPresentation {
