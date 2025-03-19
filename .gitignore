@@ -1,0 +1,20 @@
+# Node modules folder
+node_modules/
+
+# Target folder (usually for Java projects)
+target/
+
+# Package lock files
+package-lock.json
+
+# Transaction management Java file (if you don't want it tracked)
+TransactionManagement.java
+
+# Documentation files
+usecases.docx
+
+# If you don't want the pom.xml to be tracked (for Maven projects), you can ignore it too
+pom.xml
+
+# Optionally, ignore the README if you don't want it in version control
+README.md
