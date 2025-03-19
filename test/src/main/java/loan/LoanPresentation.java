@@ -2,13 +2,19 @@ package loan;
 import java.util.Scanner;
 
 public class LoanPresentation {
-    private LoanBusiness loanBusiness; // business layer object to handle loan services
-    private Scanner scanner;
+    public LoanBusiness loanBusiness; // business layer object to handle loan services
+    public Scanner scanner;
 
     // Constructor that initializes the loanBusiness and scanner for the userinput
     public LoanPresentation() {
         this.loanBusiness = new LoanBusiness();
         this.scanner = new Scanner(System.in);
+    }
+
+    // Constructor for testing (allows dependency injection)
+    public LoanPresentation(LoanBusiness loanBusiness, Scanner scanner) {
+        this.loanBusiness = loanBusiness;
+        this.scanner = scanner;
     }
 
     //this method display a menu where user can input their choice and the system will process it 
@@ -47,7 +53,7 @@ public class LoanPresentation {
     }
 
     // apply for loan method collects user input ( name , loan type and amount ) and submit the loan application
-    private void applyForLoan() {
+    public void applyForLoan() {
         System.out.print("Enter your name: ");
         String name = scanner.nextLine();
         System.out.print("Enter loan type (Personal/Home): ");
@@ -61,7 +67,7 @@ public class LoanPresentation {
     }
 
     // view loan status method collects the user name and displays the status of their loan applicatio
-    private void viewLoanStatus() {
+    public void viewLoanStatus() {
         System.out.print("Enter your name: ");
         String name = scanner.nextLine();
         String status = loanBusiness.getLoanStatus(name);
@@ -69,7 +75,7 @@ public class LoanPresentation {
     }
 
     //repay loan method Collects the user name and repayment amount, and Confirm the repayment
-    private void repayLoan() {
+    public void repayLoan() {
         System.out.print("Enter your name: ");
         String name = scanner.nextLine();
         System.out.print("Enter repayment amount: ");
@@ -81,7 +87,7 @@ public class LoanPresentation {
     }
 
     //approve loan method collects the staff ID, applicant name, and chose to approve or reject the application, then updates the loan approval.
-    private void approveLoan() {
+    public void approveLoan() {
         System.out.print("Enter staff ID: ");
         String staffId = scanner.nextLine();
         System.out.print("Enter applicant name: ");

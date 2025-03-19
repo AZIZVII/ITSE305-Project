@@ -3,8 +3,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LoanData {
-    private Map<String, String> loanStatusMap; // map to store loan statues
-    private Map<String, Double> repaymentsMap; // map to store repayment amount
+    public Map<String, String> loanStatusMap; // map to store loan statues
+    public Map<String, Double> repaymentsMap; // map to store repayment amount
 
     // constructor for initializing the storing of hashMaps for loan status and repayment
     public LoanData() {

@@ -1,10 +1,11 @@
 package loan;
 public class LoanBusiness {
-    private LoanData loanData; // data layer object to manage loan data
+    public LoanData loanData; // data layer object to manage loan data
 
     // a constructor that initialze the loan data object  
     public LoanBusiness() {
         this.loanData = new LoanData();
+        
     }
 
     // it manages the storing of data that comes from presentation layer to the data layer
