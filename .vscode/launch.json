@@ -5,12 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
+            // Debug the currently open file in the editor
             "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
         },
         {
+            // Debug a specific main class in the "demo" project
             "type": "java",
             "name": "main",
             "request": "launch",
