@@ -81,6 +81,16 @@ class StaffManagement {
     }
 }
 
+
+public void removeStaff(String id) {
+    staffList.removeIf(staff -> staff.getId().equals(id));
+    auditLogs.add("Removed staff with ID: " + id);
+
+    // Inform the user that the staff was removed
+    System.out.println("[INFO] Staff with ID " + id + " was removed.");
+}
+
+
 // Presentation Layer: Provides an interface to interact with staff management
 public class AdminPanel {
     public static void main(String[] args) { // Change "AdminPanel" to "main"
