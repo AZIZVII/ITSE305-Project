@@ -59,18 +59,18 @@ public class AccountManagementApp {
         }
     }
 
+  // Method to display a prompt and get input from the user
+private String getInput(String prompt) {
+    System.out.print(prompt); // Display the prompt
+    return scanner.nextLine(); // Read and return user input
+}
     // Method to create a new account by taking user input for the account details
     private void createAccount() {
-        System.out.print("Enter Account ID: ");
-        String accountId = scanner.nextLine(); // Read account ID
-        System.out.print("Enter Name: ");
-        String name = scanner.nextLine(); // Read account holder's name
-        System.out.print("Enter Address: ");
-        String address = scanner.nextLine(); // Read account holder's address
-        System.out.print("Enter Phone: ");
-        String phone = scanner.nextLine(); // Read account holder's phone number
-
-        // Call AccountService to create the account and provide feedback to the user
+        String accountId = getInput("Enter Account ID: ");
+        String name = getInput("Enter Name: ");
+        String address = getInput("Enter Address: ");
+        String phone = getInput("Enter Phone: ");
+    
         if (accountService.createAccount(accountId, name, address, phone)) {
             System.out.println("Account created successfully.");
         } else {
@@ -80,10 +80,8 @@ public class AccountManagementApp {
 
     // Method to close an account by taking the account ID
     private void closeAccount() {
-        System.out.print("Enter Account ID to close: ");
-        String accountId = scanner.nextLine(); // Read account ID
-
-        // Call AccountService to close the account and provide feedback to the user
+        String accountId = getInput("Enter Account ID to close: ");
+    
         if (accountService.closeAccount(accountId)) {
             System.out.println("Account closed successfully.");
         } else {
@@ -93,14 +91,10 @@ public class AccountManagementApp {
 
     // Method to update account details by taking the account ID and new details (address and phone)
     private void updateAccount() {
-        System.out.print("Enter Account ID to update: ");
-        String accountId = scanner.nextLine(); // Read account ID
-        System.out.print("Enter new Address: ");
-        String address = scanner.nextLine(); // Read new address
-        System.out.print("Enter new Phone: ");
-        String phone = scanner.nextLine(); // Read new phone number
-
-        // Call AccountService to update the account and provide feedback to the user
+        String accountId = getInput("Enter Account ID to update: ");
+        String address = getInput("Enter new Address: ");
+        String phone = getInput("Enter new Phone: ");
+    
         if (accountService.updateAccount(accountId, address, phone)) {
             System.out.println("Account updated successfully.");
         } else {
@@ -110,15 +104,13 @@ public class AccountManagementApp {
 
     // Method to view account details by taking the account ID
     private void viewAccountDetails() {
-        System.out.print("Enter Account ID to view details: ");
-        String accountId = scanner.nextLine(); // Read account ID
-
-        // Call AccountService to get account details and provide feedback to the user
+        String accountId = getInput("Enter Account ID to view details: ");
+    
         String accountDetails = accountService.viewAccountDetails(accountId);
         if (accountDetails != null) {
-            System.out.println("Account Details: " + accountDetails); // Display account details
+            System.out.println("Account Details: " + accountDetails);
         } else {
-            System.out.println("Account not found."); // Account does not exist
+            System.out.println("Account not found.");
         }
     }
 }
