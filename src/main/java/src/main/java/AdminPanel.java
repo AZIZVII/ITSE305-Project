@@ -45,15 +45,14 @@ class StaffManagement {
     private List<Staff> staffList = new ArrayList<>();
     private List<String> auditLogs = new ArrayList<>();
 
-    public void addStaff(String id, String name, String role) {
-        staffList.add(new Staff(id, name, role));
-        auditLogs.add("Added staff: " + name + " (" + id + ") as " + role);
-    }
-
-    public void removeStaff(String id) {
-        staffList.removeIf(staff -> staff.getId().equals(id));
-        auditLogs.add("Removed staff with ID: " + id);
-    }
+   
+public void addStaff(String id, String name, String role) {
+    staffList.add(new Staff(id, name, role));
+    auditLogs.add("Added staff: " + name + " (" + id + ") as " + role);
+    
+    // Inform the user that the staff was added (does not affect logic)
+    System.out.println("[INFO] Staff " + name + " added successfully.");
+}
 
     public void assignRole(String id, String newRole) {
         for (Staff staff : staffList) {
