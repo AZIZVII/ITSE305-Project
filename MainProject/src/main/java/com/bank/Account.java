@@ -9,13 +9,30 @@ public class Account {
     private String address; // The address of the account holder
     private String phone; // The phone number of the account holder
 
-    // Constructor to initialize the account object with required details
-    public Account(String accountId, String name, String address, String phone) {
-        this.accountId = accountId; // Set the account ID
-        this.name = name; // Set the account holder's name
-        this.address = address; // Set the account holder's address
-        this.phone = phone; // Set the account holder's phone number
+   // Constructor to initialize the account object with required details
+public Account(String accountId, String name, String address, String phone) {
+    // Validate accountId
+    if (accountId == null || accountId.trim().isEmpty()) {
+        throw new IllegalArgumentException("Account ID cannot be null or empty.");
     }
+    // Validate name
+    if (name == null || name.trim().isEmpty()) {
+        throw new IllegalArgumentException("Name cannot be null or empty.");
+    }
+    // Validate address
+    if (address == null || address.trim().isEmpty()) {
+        throw new IllegalArgumentException("Address cannot be null or empty.");
+    }
+    // Validate phone
+    if (phone == null || phone.trim().isEmpty()) {
+        throw new IllegalArgumentException("Phone cannot be null or empty.");
+    }
+
+    this.accountId = accountId; // Set the account ID
+    this.name = name; // Set the account holder's name
+    this.address = address; // Set the account holder's address
+    this.phone = phone; // Set the account holder's phone number
+}
 
     // Getter method for account ID
     public String getAccountId() {
