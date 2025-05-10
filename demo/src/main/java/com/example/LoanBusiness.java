@@ -24,7 +24,7 @@ public class LoanBusiness {
     }
 
     // it manages updating loan status to the data layer
-    public void approveLoan(String staffId, String name, boolean isApproved) {
+    public void approveLoan(String name, boolean isApproved) {
         loanData.updateLoanStatus(name, isApproved ? "Approved" : "Rejected");
     }
 }

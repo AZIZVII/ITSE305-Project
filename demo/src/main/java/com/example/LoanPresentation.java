@@ -27,9 +27,22 @@ public class LoanPresentation {
             System.out.println("4. Approve Loan (Staff Only)");
             System.out.println("5. Exit");
             System.out.print("Choose an option: ");
-            int choice = scanner.nextInt();
-            scanner.nextLine(); 
-
+    
+            // Ensure valid input is entered (an integer between 1 and 5)
+            int choice = -1;
+            while (choice < 1 || choice > 5) {
+                if (scanner.hasNextInt()) {
+                    choice = scanner.nextInt();
+                    scanner.nextLine(); // consume newline
+                    if (choice < 1 || choice > 5) {
+                        System.out.println("Invalid input. Please choose a number between 1 and 5.");
+                    }
+                } else {
+                    System.out.println("Invalid input. Please enter a valid number.");
+                    scanner.nextLine(); // consume invalid input
+                }
+            }
+    
             switch (choice) {
                 case 1:
                     applyForLoan();
@@ -45,9 +58,10 @@ public class LoanPresentation {
                     break;
                 case 5:
                     System.out.println("Thank you for using Loan Services.");
-                    System.exit(0);;
+                    System.exit(0);
                 default:
-                    System.out.println("Invalid input. Please try again.");
+                    // This block is unreachable due to the validation above
+                    break;
             }
         }
     }
@@ -88,15 +102,23 @@ public class LoanPresentation {
 
     //approve loan method collects the staff ID, applicant name, and chose to approve or reject the application, then updates the loan approval.
     public void approveLoan() {
-        System.out.print("Enter staff ID: ");
-        String staffId = scanner.nextLine();
         System.out.print("Enter applicant name: ");
         String name = scanner.nextLine();
-        System.out.print("Approve? (true/false): ");
-        boolean isApproved = scanner.nextBoolean();
-        scanner.nextLine(); 
-
-        loanBusiness.approveLoan(staffId, name, isApproved);
+    
+        boolean isApproved = false;
+        while (true) {
+            System.out.print("Approve? (true/false): ");
+            if (scanner.hasNextBoolean()) {
+                isApproved = scanner.nextBoolean();
+                scanner.nextLine();  // consume newline character
+                break;  // exit the loop if input is valid
+            } else {
+                System.out.println("Invalid input. Please enter 'true' or 'false'.");
+                scanner.nextLine();  // consume invalid input
+            }
+        }
+    
+        loanBusiness.approveLoan(name, isApproved);
         System.out.println("Loan approval updated!");
     }
 }

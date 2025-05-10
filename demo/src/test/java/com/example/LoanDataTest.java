@@ -28,7 +28,7 @@ public class LoanDataTest {
     public void testAddRepayment() {
         loanData.addRepayment("Ali", 1000);
         loanData.addRepayment("Ali", 500);
-        assertEquals(1500.0, loanData.repaymentsMap.get("Ali"));
+        assertEquals(1500.0, loanData.getRepaymentsMap().get("Ali"));
     }
 
     @Test

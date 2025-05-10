@@ -33,7 +33,7 @@ public class LoanBusinessTest {
     @Test
     public void testApproveLoan() {
         loanBusiness.applyForLoan("Ali", "personal", 2000.0);
-        loanBusiness.approveLoan("2020", "Ali", true);
+        loanBusiness.approveLoan("Ali", true);
         assertEquals("Approved", loanBusiness.getLoanStatus("Ali"));
     }
 }
